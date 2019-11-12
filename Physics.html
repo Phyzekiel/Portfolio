@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Dark_Portfolio-grids.css">
+
+    <title>Physicist: Luc Dunn</title>
+
+</head>
+<body>
+<div class="grid">
+    <header>
+
+    <h1><a href="First.html" title="Home">PORTFOLIO OF A MECHANICAL ENGINEER<br>LUC DUNN</a>
+    </h1>
+<div class="tiny">
+  <a href="Designerko.html"><img src="Media\south-korea.png" width="15%" alt="한국어" title="한국어"></a>
+  <a href="Designer.html"><img src="Media\united-states.png" width="15%" alt="English" title="English"></a>
+  <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></p> <p>From <a href="https://www.flaticon.com/"         title="Flaticon">www.flaticon.com</a></p></div>
+</header>
+<nav>
+        <div class="navcard"><a href="Designer.html"><img src="Media\Design Icon.png" alt="My Designs" title="My Designs" width=100%></a></div>
+        <div class="navcard"><a href="Physics.html"><img src="Media\Physics Icon.png" alt="My Physics" title="My Physics" width=100%></a></div>
+        <div class="navcard"><a href="Maker.html"><img src="Media\Maker Icon.png" alt="My Maker Works" title="My Maker Works" width=100%></a></div>
+        <div class="navcard"><a href="Play.html"><img src="Media\Play Icon.png" alt="My Free Time" title="My Free Time" width=100%></a></div>
+    </nav>
+ <main class="main-grid">
+<div class="content-card">
+ <div class="content-panel"><img src="Media\PK-TKD-Physics.gif" alt="Physics of Taekwondo & Parkour" title="Physics of Taekwondo & Parkour"></div>
+ <div class="content-panel">
+       <h2>Discovering My Physics</h2>
+       <br>My first avenue into Physics was theoretical and philosophical considerations, like the many-worlds hypothesis, and string theory. However, in high school I took Physics at the same time as I was becoming very involved in Martial Arts and Parkour. The implications were so interesting and applicable to those exercises, I became engrossed and read the entire Physics textbook in under a week.
+       <br><br>I was hooked after that, and every movement in my exercises and every problem in my textbooks became intertwined from then on. As a Physics and Education major also, I was exposed to a lot of paradigm-breaking Physics teaching concepts, which solidified my understanding of Physics concepts and how to teach them. Fortunately, this all led seamlessly to my first job as an adjunct professor of sports physiology and martial arts.
+     </div>
+   </div>
+<div class="content-card">
+  <div class="content-panel"><img src="Media\Automotive Stopping Distance Graphs.png" alt="Braking Distance Calculations" title="Braking Distance Calculations"></div>
+  <div class="content-panel"><h2>Mechanics</h2>
+    <br>One area I missed out on in my engineering upbringing was an appreciation for automobiles. My original interest in Physics grew out of Biomechanics, and for some reason, that curiosity just never reached beyond the hood of a car.
+<br><br>In graduate school I took a class on Automotive Dynamics, and it was really eye-opening. There were so many things I found that surprised me with the very direct and simple application of torque, rotational kinetic energy, and gear ratios. I really enjoyed that class.
+
+  </div>
+</div>
+<div class="content-card">
+  <div class="content-panel">
+    <img src="Media\Turntable Diagram.png" alt="Simplified Turntable Concept" title="Simplified Turntable Concept">
+    </div>
+  <div class="content-panel">
+    <h2>Design Physics</h2>
+    Here, you can try to adjust some values I had to calculate and account for in a recent large project, the Industrial Powered Turntables.
+    <br><br>
+  <form>
+  <div style="width:75%"><label for="mu">Coefficient of Friction</label><input type="range" min="0.1" max="1.1" step="0.05" id="mu" value="0.85" oninput="Torquecalc()"><div id="mu1" style="float: right"></div></div>
+  <br><div style="width:75%"><label for="dt">Diameter of Turntable</label><input type="range"  min="36" max="72" step="6" id="dt" value="66" oninput="Torquecalc()"><div id="dt1" style="float: right"></div></div>
+  <br><div style="width:75%"><label for="p">Air Pressure</label><input type="range"  min="10" max="150" step="10" id="p" value="100" oninput="Torquecalc()"><div id="p1" style="float: right"></div></div>
+  <br><div style="width:75%"><label for="da">Air Piston Diameter</label><input type="range"  min="0.5" max="6" step="0.5" id="da" value="2" oninput="Torquecalc()"><div id="da1" style="float: right"></div></div>
+  <br>Maximum Possible Friction-Derived Torque at Drive Wheel = <div id="Torque"></div>
+    <script>
+      function Torquecalc(){
+        var muj = document.getElementById("mu").value;
+        var dtj = document.getElementById("dt").value;
+        var pj = document.getElementById("p").value;
+        var daj = document.getElementById("da").value;
+        document.getElementById("Torque").innerHTML = parseInt((muj*pj*(dtj/2)*3.14*((daj/2)*(daj/2)))) + " in*lbs";
+        document.getElementById("mu1").innerHTML = muj;
+        document.getElementById("dt1").innerHTML = dtj + " in";
+        document.getElementById("p1").innerHTML = pj + " psi";
+        document.getElementById("da1").innerHTML = daj +" in";
+      }
+    </script>
+  </form>
+<!--
+<h1>GeeksforGeeks</h1>
+          <h2>oninput Attribute</h2>
+          <div style="width:50%">Slide a Number here: <input type="range" min="4" max="1000" step="1" value="4" id="GFG"
+          oninput="Geeks()"> <div id="x1" style="float: right"></div></div>
+          <input type="range" min="4" max="1000" step="1" value="4" id="GF"
+          oninput="Geeks()"><div id="y1"></div>
+          <div id="sudo"></div>
+          <script>
+              function Geeks() {
+                  var x = document.getElementById("GFG").value;
+                  var y = document.getElementById("GF").value;
+                  document.getElementById("sudo").innerHTML =
+                  "Entered numbers multiplied: " + parseInt(x*y);
+                  document.getElementById("x1").innerHTML = x;
+                  document.getElementById("y1").innerHTML = y;
+              }
+          </script>
+-->
+</div>
+</div>
+
+<div class="report-card">
+  <div class="report-panel">
+    <h2>Grad School Class Report (Abridged)</h2>
+  <br>Below, you can view a summary of a paper I wrote for my Finite Element Analysis class.
+  <br>I really enjoyed this class, because it was a very thorough introduction to model simulations, and the mathematical theory behind them. In my current role as a manufacturing engineer, I use Solidworks Simulation Professional to analyze my designs for critical machine components. I especially enjoy a productive design study or shape optimization simulation!</div>
+  <div class="report-panel">
+  <iframe src="https://onedrive.live.com/embed?cid=7FE7257BCA4CF96E&resid=7FE7257BCA4CF96E%21656185&authkey=AH20fJLdnRle0RU&em=2" style="width:100%; height:500px" frameborder="0" scrolling="no" ></iframe></div>
+</div>
+
+</main>
+<aside class="footpic">
+  <img src="Media\Luc Dunn Mechanical Engineer Tag.png" alt="Luc Dunn: Mechanical Engineer">
+</aside>
+<footer>
+  Contact Me via LinkedIn:<br>
+  <a href="https://www.linkedin.com/in/luc-dunn-5974ba147" alt="Luc Dunn on LinkedIn" title="Luc Dunn on LinkedIn"><img src="Media\LinkedInLogo.png" width="6%" style="background-color:white; padding=1%; min-width=100px;"></a>
+</footer>
+</div>
+</body>
