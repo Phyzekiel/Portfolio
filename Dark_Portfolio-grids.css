@@ -119,6 +119,7 @@ main{
   margin:auto;
   display:flex;
   display: inline;
+  padding: 20px;
   flex-direction: column;
   align-items:left;
   font-size: 150%;
