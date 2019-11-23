@@ -112,7 +112,7 @@ main{
   margin:auto;
   align-items:left;
   padding:1%;
-  font-size: 125%;
+  font-size: 150%;
 }
 
 .content-panel{
@@ -128,8 +128,7 @@ main{
   width:100%;
   max-width:450px;
   min-width: 200px;
-  margin:3%;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10%;
 }
 
@@ -137,8 +136,7 @@ main{
   width:100%;
   max-width:450px;
   min-width: 200px;
-  margin:3%;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10%;
   height:450px;
 }
