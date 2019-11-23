@@ -46,7 +46,7 @@ h1{
 
 h2{
     color: #CC5C47;
-    Font-size:200%;
+    Font-size:125%;
 }
 
 header a:visited{
@@ -121,30 +121,31 @@ main{
   display: inline;
   flex-direction: column;
   align-items:left;
-  font-size: 200%;
+  font-size: 150%;
 }
 
 .content-panel img{
-  width:90%;
+  width:100%;
   max-width:450px;
+  min-width: 200px;
   padding: 10px;
   border-radius: 10%;
 }
 
 .content-panel iframe{
-  width:90%;
+  width:100%;
   max-width:450px;
-  min-width: 200px
+  min-width: 200px;
   padding: 10px;
   border-radius: 10%;
-  height:400px;
+  height:450px;
 }
 
 .footpic img{
   position: fixed;
-  width:20%;
-  right: 3%;
-  bottom: 3%;
+  width:17%;
+  right: 2%;
+  bottom: 2%;
   z-index: 2;
   opacity: 0.4;
   padding: 10px;
@@ -170,7 +171,7 @@ nav{
 }
 
 /*Desktop Transform*/
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 800px) {
 .grid{
     display: grid;
     grid-template-columns: 120px 1fr;
@@ -189,7 +190,6 @@ nav{
   grid-area:"sidenav";
     height: 100%;
   display: grid;
-
   background-color: black;
   position: fixed;
   width: 90px;
