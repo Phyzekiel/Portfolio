@@ -191,10 +191,14 @@ nav{
   display: grid;
   background-color: black;
   position: fixed;
-  width: 90px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 120px;
   top: 0px;
   z-index: 2;
 }
+
 
 header{
   position: fixed;
