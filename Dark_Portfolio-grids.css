@@ -128,7 +128,8 @@ main{
   width:100%;
   max-width:450px;
   min-width: 200px;
-  padding: 20px;
+  padding: 10px;
+  padding-left:0px;
   border-radius: 10%;
 }
 
@@ -136,7 +137,8 @@ main{
   width:100%;
   max-width:450px;
   min-width: 200px;
-  padding: 20px;
+  padding: 10px;
+  padding-left:0px;
   border-radius: 10%;
   height:450px;
 }
