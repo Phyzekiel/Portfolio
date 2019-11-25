@@ -51,17 +51,70 @@
     Here, you can try to adjust some values I had to calculate and account for in a recent large project, the Industrial Powered Turntables.
     <br><br>
   <form>
-  <div style="width:75%"><label for="mu">Coefficient of Friction</label><input type="range" min="0.1" max="1.1" step="0.05" id="mu" value="0.85" oninput="Torquecalc()"><div id="mu1" style="float: right"></div></div>
-  <br><div style="width:75%"><label for="dt">Diameter of Turntable</label><input type="range"  min="36" max="72" step="6" id="dt" value="66" oninput="Torquecalc()"><div id="dt1" style="float: right"></div></div>
-  <br><div style="width:75%"><label for="p">Air Pressure</label><input type="range"  min="10" max="150" step="10" id="p" value="100" oninput="Torquecalc()"><div id="p1" style="float: right"></div></div>
-  <br><div style="width:75%"><label for="da">Air Piston Diameter</label><input type="range"  min="0.5" max="6" step="0.5" id="da" value="2" oninput="Torquecalc()"><div id="da1" style="float: right"></div></div>
-  <br><div style="width:75%"><label for="dcoil">Outer Diameter of Coil</label><input type="range"  min="35" max="70" step="5" id="dcoil" value="50" oninput="Torquecalc()"><div id="dcoil1" style="float: right"></div></div>
-  <br><div style="width:75%"><label for="m">Mass of Coil Wraps</label><input type="range"  min="3000" max="7000" step="500" id="m" value="5500" oninput="Torquecalc()"><div id="m1" style="float: right"></div></div>
-  <br><div style="width:75%"><label for="rpmmax">Max Desired RPM</label><input type="range"  min="4" max="20" step="2" id="rpmmax" value="10" oninput="Torquecalc()"><div id="rpmmax1" style="float: right"></div></div>
-  <br>Maximum Possible Friction-Derived Torque at Drive Wheel = <div id="Torque"></div>
-  <br>Estimated Coil Inertia = <div id="Ihoop"></div>
-  <br>Maximum Possible Angular Acceleration = <div id="alpha"></div>
-  <br>Time Required to reach Desired RPM = <div id="rpmtime"></div>
+    <table style="width:90%">
+      <tr>
+        <td><label for="mu">Coefficient of Friction</label></td>
+        <td><input type="range" min="0.1" max="1.1" step="0.05" id="mu" value="0.85" oninput="Torquecalc()"></td>
+        <td><div id="mu1"></div></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><label for="dt">Diameter of Turntable</label></td>
+        <td><input type="range"  min="36" max="72" step="6" id="dt" value="66" oninput="Torquecalc()"></td>
+        <td><div id="dt1"></div></td>
+        <td>in</td>
+      <tr>
+        <td><label for="p">Air Pressure</label></td>
+        <td><input type="range"  min="10" max="150" step="10" id="p" value="100" oninput="Torquecalc()"></td>
+        <td><div id="p1"></div></td>
+        <td>psi</td>
+      </tr>
+      <tr>
+        <td><label for="da">Air Piston Diameter</label></td>
+        <td><input type="range"  min="0.5" max="6" step="0.5" id="da" value="2" oninput="Torquecalc()"></td>
+        <td><div id="da1"></div></td>
+        <td>in</td>
+      </tr>
+      <tr>
+        <td><label for="dcoil">Outer Diameter of Coil</label></td>
+        <td><input type="range"  min="35" max="70" step="5" id="dcoil" value="50" oninput="Torquecalc()"></td>
+        <td><div id="dcoil1"></div></td>
+        <td>in</td>
+      </tr>
+      <tr>
+        <td><label for="m">Mass of Coil Wraps</label></td>
+        <td><input type="range"  min="3000" max="7000" step="500" id="m" value="5500" oninput="Torquecalc()"></td>
+        <td><div id="m1"></div></td>
+        <td>lbs</td>
+      </tr>
+      <tr>
+        <td><label for="rpmmax">Max Desired RPM</label></td>
+        <td><input type="range"  min="4" max="20" step="2" id="rpmmax" value="10" oninput="Torquecalc()"></td>
+        <td><div id="rpmmax1"></div></td>
+        <td>RPM</td>
+      </tr>
+      <tr>
+        <td colspan="2" style="border-top:5px solid black"><br>Maximum Possible Friction-Derived <br>Torque at Drive Wheel = </td>
+        <td style="border-top:5px solid black"><div id="Torque"></div></td>
+        <td style="border-top:5px solid black">ft*lbs</td>
+      </tr>
+      <tr>
+        <td colspan="2">Estimated Coil Inertia = </td>
+        <td><div id="Ihoop"></div></td>
+        <td>ft^2*lbs</td>
+      </tr>
+      <tr>
+        <td colspan="2">Maximum Possible Angular Acceleration = </td>
+        <td><div id="alpha"></div></td>
+        <td>rad/s/s</td>
+      </tr>
+      <tr>
+        <td colspan="2">Time Required to reach Desired RPM = </td>
+        <td><div id="rpmtime"></div></td>
+        <td>s</td>
+      </tr>
+    </table>
+
     <script>
       function Torquecalc(){
         var muj = document.getElementById("mu").value;
@@ -75,22 +128,23 @@
         var Ihoopmj = ((dcoilj/24)*(dcoilj/24))+(((dcoilj-20)/24)*((dcoilj-20)/24));
         var Ihoopj = (mj/2)*Ihoopmj;
         var alphaj = (Tj/Ihoopj);
-        var rpmtimej = (rpmmaxj*2*3.14159)/60;
-        document.getElementById("Torque").innerHTML = Tj.toFixed(0) + " ft*lbs";
-        document.getElementById("Ihoop").innerHTML = Ihoopj.toFixed(1) + " ft^2*lbs";
-        document.getElementById("alpha").innerHTML = alphaj.toFixed(4) + " rad/s/s";
-        document.getElementById("dcoil1").innerHTML = dcoilj + " in";
-        document.getElementById("m1").innerHTML = mj + " lbs";
-        document.getElementById("rpmmax1").innerHTML = rpmmaxj + " RPM";
+        var rpmtimej = ((rpmmaxj*3.14159)/30)/alphaj;
+        document.getElementById("Torque").innerHTML = Tj.toFixed(0);
+        document.getElementById("Ihoop").innerHTML = Ihoopj.toFixed(1);
+        document.getElementById("alpha").innerHTML = alphaj.toFixed(4);
+        document.getElementById("dcoil1").innerHTML = dcoilj;
+        document.getElementById("m1").innerHTML = mj;
+        document.getElementById("rpmmax1").innerHTML = rpmmaxj;
         document.getElementById("mu1").innerHTML = muj;
-        document.getElementById("dt1").innerHTML = dtj + " in";
-        document.getElementById("p1").innerHTML = pj + " psi";
-        document.getElementById("da1").innerHTML = daj +" in";
-        document.getElementById("rpmtime").innerHTML = rpmtimej.toFixed(2) + " s";
+        document.getElementById("dt1").innerHTML = dtj;
+        document.getElementById("p1").innerHTML = pj;
+        document.getElementById("da1").innerHTML = daj;
+        document.getElementById("rpmtime").innerHTML = rpmtimej.toFixed(2);
       }
     </script>
+
   </form>
-</div>
+ </div>
 </div>
 
 <div class="report-card">
