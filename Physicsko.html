@@ -30,15 +30,15 @@
  <div class="content-panel"><img src="Media\PK-TKD-Physics.gif" alt="태권도와 파쿠어의 물리 운동역학" title="태권도와 파쿠어의 물리 운동역학"></div>
  <div class="content-panel">
        <h2>저에게 물리라는</h2>
-       <br>My first avenue into Physics was theoretical and philosophical considerations, like the many-worlds hypothesis, and string theory. However, in high school I took Physics at the same time as I was becoming very involved in Martial Arts and Parkour. The implications were so interesting and applicable to those exercises, I became engrossed and read the entire Physics textbook in under a week.
-       <br><br>I was hooked after that, and every movement in my exercises and every problem in my textbooks became intertwined from then on. As a Physics and Education major also, I was exposed to a lot of paradigm-breaking Physics teaching concepts, which solidified my understanding of Physics concepts and how to teach them. Fortunately, this all led seamlessly to my first job as an adjunct professor of sports physiology and martial arts.
+       <br>원래는 물리학에 대한 관심 생기는 이유는 물리이론과 철학적인 개념과 겹쳐졌기 때문입니다. 예를 들면 다세계 해석과 끈이론과 스티븐 호킹 박사의 블랙홀 이론입니다. 중학교 고등학교때 그런 물리이론을 알아보다가, 고등학교 3학년때 물리수업을 들었고 그 당시에 태권도와 파쿠어에 관심이 많았을 때입니다. 물리의 계산 영향과 운동 동작이 머릿속에서 연결이 돼서, 엄청 재미있었습니다. 물리학에 마음이 빠져서 일주일안에 재미로 물리교과서를 끝까지 읽었습니다.
+       <br><br>그 뒤로는 물리에 관심이 끝이지 않았습니다. 모든 운동동작과 물리교과서에 있는 문제 푸는 것이 머릿속에 연결됐습니다. 또 대학교에 물리학과 교육학 같이 전공을해서, 물리학의 법칙을 실천하는 이해심이 깊어졌습니다. 그 물리학과 교육과 태권도를 덕분에 대학교 졸업할 때 첫 직업자리는 한국에서 운동역학과 무술학의 교수로 잡았습니다.
      </div>
    </div>
 <div class="content-card">
   <div class="content-panel"><img src="Media\Automotive Stopping Distance Graphs.png" alt="자동차 브래이크으로 새우는 길이 계산" title="자동차 브래이크으로 새우는 길이 계산"></div>
   <div class="content-panel"><h2>자동차의 물리이론</h2>
-    <br>One area I missed out on in my engineering upbringing was an appreciation for automobiles. My original interest in Physics grew out of Biomechanics, and for some reason, that curiosity just never reached beyond the hood of a car.
-<br><br>In graduate school I took a class on Automotive Dynamics, and it was really eye-opening. There were so many things I found that surprised me with the very direct and simple application of torque, rotational kinetic energy, and gear ratios. I really enjoyed that class.
+    <br>어렸을 때 저의 물리학을 좋아했던 원동력은 운동역학으로 생겨서 그런지, 이상하게 그때 자동차 쪽으로 관심이 안 갔습니다.
+<br><br>대학원에서 석사 할 때 고급자동차역학수업 들으면서 놀라웠습니다. 복잡한 자동차 장치와 움직임을 회전력과 회전운동 에너지로 계산을 바로 할 수 있어서 아주 놀라웠습니다. 그 수업이 너무나 좋아서 논문도 자동차 쪽으로 쓴 겁니다.
   </div>
 </div>
 <div class="content-card">
@@ -47,70 +47,70 @@
     </div>
   <div class="content-panel">
     <h2>디자인중 물리계산</h2>
-    Here, you can try to adjust some values I had to calculate and account for in a recent large project, the Industrial Powered Turntables.
+   이 폼은 제가 만든 물리적 계산기입니다. 최근에 전기 턴테이블을 디자인했을 때 이런 계산 엑셀 파일을 만들어서 계산하면서 디자인을 했습니다.
     <br><br>
   <form>
     <table style="width:90%">
       <tr>
-        <td><label for="mu">Coefficient of Friction</label></td>
+        <td><label for="mu">마찰 계수</label></td>
         <td><input type="range" min="0.1" max="1.1" step="0.05" id="mu" value="0.85" oninput="Torquecalc()"></td>
         <td><div id="mu1"></div></td>
         <td></td>
       </tr>
       <tr>
-        <td><label for="dt">Diameter of Turntable</label></td>
+        <td><label for="dt">턴테이블 지름</label></td>
         <td><input type="range"  min="36" max="72" step="6" id="dt" value="66" oninput="Torquecalc()"></td>
         <td><div id="dt1"></div></td>
-        <td>in</td>
+        <td>인치</td>
       <tr>
-        <td><label for="p">Air Pressure</label></td>
+        <td><label for="p">공기압력</label></td>
         <td><input type="range"  min="10" max="150" step="10" id="p" value="100" oninput="Torquecalc()"></td>
         <td><div id="p1"></div></td>
-        <td>psi</td>
+        <td>평방 인치당 파운드</td>
       </tr>
       <tr>
-        <td><label for="da">Air Piston Diameter</label></td>
+        <td><label for="da">공기압 실린더 안지름</label></td>
         <td><input type="range"  min="0.5" max="6" step="0.5" id="da" value="2" oninput="Torquecalc()"></td>
         <td><div id="da1"></div></td>
-        <td>in</td>
+        <td>인치</td>
       </tr>
       <tr>
-        <td><label for="dcoil">Outer Diameter of Coil</label></td>
+        <td><label for="dcoil">구리 고리 바깥 지름</label></td>
         <td><input type="range"  min="35" max="70" step="5" id="dcoil" value="50" oninput="Torquecalc()"></td>
         <td><div id="dcoil1"></div></td>
-        <td>in</td>
+        <td>인치</td>
       </tr>
       <tr>
-        <td><label for="m">Mass of Coil Wraps</label></td>
+        <td><label for="m">구리 고리 무게</label></td>
         <td><input type="range"  min="3000" max="7000" step="500" id="m" value="5500" oninput="Torquecalc()"></td>
         <td><div id="m1"></div></td>
-        <td>lbs</td>
+        <td>파운드</td>
       </tr>
       <tr>
-        <td><label for="rpmmax">Max Desired RPM</label></td>
+        <td><label for="rpmmax">최대 분당 회전수</label></td>
         <td><input type="range"  min="4" max="20" step="2" id="rpmmax" value="10" oninput="Torquecalc()"></td>
         <td><div id="rpmmax1"></div></td>
-        <td>RPM</td>
+        <td>분당 회전수</td>
       </tr>
       <tr>
-        <td colspan="2" style="border-top:5px solid black"><br>Maximum Possible Friction-Derived <br>Torque at Drive Wheel = </td>
+        <td colspan="2" style="border-top:5px solid black"><br>최대로 가능한 드라이브 바퀴의 <<br>마찰로 이루는 회전력 = </td>
         <td style="border-top:5px solid black"><div id="Torque"></div></td>
-        <td style="border-top:5px solid black">ft*lbs</td>
+        <td style="border-top:5px solid black">피트 파운드</td>
       </tr>
       <tr>
-        <td colspan="2">Estimated Coil Inertia = </td>
+        <td colspan="2">구리 고리의 예상 관성 모멘트 = </td>
         <td><div id="Ihoop"></div></td>
-        <td>ft^2*lbs</td>
+        <td>평당 피트 파운드</td>
       </tr>
       <tr>
-        <td colspan="2">Maximum Possible Angular Acceleration = </td>
+        <td colspan="2">최대 각가속도 = </td>
         <td><div id="alpha"></div></td>
-        <td>rad/s/s</td>
+        <td>초당 초당 라디안</td>
       </tr>
       <tr>
-        <td colspan="2">Time Required to reach Desired RPM = </td>
+        <td colspan="2">최대 분당 회전수 되기전 시간(초) = </td>
         <td><div id="rpmtime"></div></td>
-        <td>s</td>
+        <td>초</td>
       </tr>
     </table>
 
@@ -149,8 +149,10 @@
 <div class="report-card">
   <div class="report-panel">
     <h2>대학원 리퍼트 (요약됨)</h2>
-  <br>Below, you can view a summary of a paper I wrote for my Finite Element Analysis class.
-  <br>I really enjoyed this class, because it was a very thorough introduction to model simulations, and the mathematical theory behind them. In my current role as a manufacturing engineer, I use Solidworks Simulation Professional to analyze my designs for critical machine components. I especially enjoy a productive design study or shape optimization simulation!</div>
+  <br>아래 보시는 리포트는 유한요소해석 수업에 쓴 요약입니다.
+  <br>이 수업을 특히 즐거웠던 것은 폭 넓은 모의실험을 설명과 계산 기본기가 나왔습니다. 이제는 제조기계 공학자 자리에는 기계의 최선 장비를 디자인할 때 솔리드웍스 프로 시뮬레이션을 사용합니다.
+저는 제일 좋은 시뮬레이션은 형상 최정화입니다.
+</div>
   <div class="report-panel">
   <iframe src="https://onedrive.live.com/embed?cid=7FE7257BCA4CF96E&resid=7FE7257BCA4CF96E%21656185&authkey=AH20fJLdnRle0RU&em=2" style="width:100%; height:500px" frameborder="0" scrolling="no" ></iframe></div>
 </div>
